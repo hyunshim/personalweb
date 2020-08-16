@@ -1,0 +1,15 @@
+@import './utils/variables';
+
+.app {
+  background: $light-primary;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}

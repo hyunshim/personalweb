@@ -1,0 +1,101 @@
+@import "../../utils/variables";
+
+.projects-container {
+    display: flex;
+    width: 100%;
+    background: $light-secondary;
+    flex-direction: column;
+    align-items: center;
+
+    .projects {
+        width: 80%;
+        margin-bottom: 18vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .expand-container {
+        height: 60px;
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &::before {
+        background: linear-gradient($light-primary, $light-secondary);
+        content: "";
+        height: 300px;
+        width: 100%;
+    }
+
+    &::after {
+        background: linear-gradient($light-secondary, $light-primary);
+        content: "";
+        height: 300px;
+        width: 100%;
+    }
+}
+
+#expandAll:checked ~ .projects > .card {
+    .image {
+        height: 300px;
+    }
+    .description > .skills {
+        transition-delay: $transition-delay-card - 0.2;
+        visibility: visible;
+    }
+    .description > .desc {
+        transition-delay: $transition-delay-card - 0.2;
+        visibility: visible;
+    }
+}
+
+input {
+    margin-left: auto;
+    margin-right: calc(10% + 90px);
+}
+input[type="checkbox"] {
+    position: relative;
+    -webkit-appearance: none;
+    height: 45px;
+    width: 100px;
+    border-radius: 45px;
+    border: 3px solid $light-secondary;
+    box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.6), 6px 6px 16px rgba(0, 0, 0, 0.15),
+        inset -6px -6px 16px rgba(255, 255, 255, 0.6), inset 6px 6px 16px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+}
+input[type="checkbox"]:before,
+input[type="checkbox"]:after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+input[type="checkbox"]:before {
+    height: 30px;
+    width: 30px;
+    background-color: $light-secondary;
+    box-shadow: -2px 0px 16px rgba(255, 255, 255, 0.75), 6px 6px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    left: 8px;
+}
+input[type="checkbox"]:after {
+    height: 15px;
+    width: 15px;
+    background-color: #7a7a7a;
+    border-radius: 50%;
+    right: -40px;
+}
+input[type="checkbox"]:checked:before {
+    left: 58px;
+}
+input[type="checkbox"]:checked:after {
+    background-color: #38e77e;
+}

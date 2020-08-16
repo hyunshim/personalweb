@@ -1,0 +1,34 @@
+@import "../../utils/variables";
+
+
+.summary {
+    margin-top: 20vh;
+    width: 50%;
+
+    img {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .name {
+        font-size: 40px;
+        font-weight: 500;
+        margin: 50px 0 20px 0;
+    }
+
+    .desc {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .bold {
+        font-weight: 500;
+    }
+
+    p {
+        font-weight: 300;
+        line-height: 1.4;
+    }
+}
