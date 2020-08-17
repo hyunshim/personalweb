@@ -6,9 +6,12 @@ import 'aos/dist/aos.css';
 
 function Card(props) {
     AOS.init();
+    let image_style = {
+        transition: `all ${props.duration/3}ms`
+    }
     return (
         <div className="card" data-aos="fade-up" data-aos-duration={props.duration}>
-            <div className="image">
+            <div className="image" style={image_style}>
                 <img src={props.imglink} />
             </div>
 
