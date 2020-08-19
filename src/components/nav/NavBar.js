@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './NavBar.scss';
 
+import Resume from '../../assets/HyunShimResume.pdf'
+
 function NavBar() {
-
-
   useEffect(() => {
     document.addEventListener("scroll", () => {
       let projectPos = document.querySelector('#projects').getBoundingClientRect().top;
@@ -31,7 +31,7 @@ function NavBar() {
           <ul>
             <li><a href="#home" id="home-link">Home</a></li>
             <li><a href="#projects" id="project-link">Projects</a></li>
-            <li><a href="#">Resume</a></li>
+            <li><a href={Resume} target="_blank">Resume</a></li>
             <li><a href="#">About Me</a></li>
           </ul>
         </div>
